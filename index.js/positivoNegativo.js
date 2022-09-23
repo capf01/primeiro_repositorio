@@ -3,7 +3,7 @@ let somapositivo=0
 numero=[]
 contnegativo=0
 
-for(let i=0; i<6; i++){
+for(let i=0; i<10; i++){
     numero [i]=parseInt(prompt(`digite um valor`))
     if (numero[i]<0){
         contnegativo++
