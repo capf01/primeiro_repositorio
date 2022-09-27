@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Página Inicial</title>
+        
+  </head>
+  <body>
+    
+      <script>
+      let a=parseFloat(prompt(`digite o primeiro lado`))
+      let b=parseFloat(prompt(`digite o segundo lado`))
+      let c=parseFloat(prompt(`digite o terceiro lado`))
+      if(a==b&&b==c&&a==c){
+        alert(`o triângulo é equilátero`)
+        document.write("<h1> triângulo é Equilátero </h1>")
+       
+      }else if(a==b ||b==c||a==c){
+        alert(`o triângulo é isósceles`)
+        document.write("<h1>  triângulo é isósceles </h1>")
+        
+      } else{
+        alert(`o triângulo é escaleno`)
+        document.write("<h1>  triângulo é escaleno </h1>") 
+      }
+        </script>
+  </body>

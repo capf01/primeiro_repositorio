@@ -5,6 +5,7 @@ let maior=0
 let menor=0
 for(let i=0; i<qtdProdutos; i++){
 precosProdutos[i]=parseFloat(prompt(`digite o valor`))
+precosProdutos.push(preco)
 if(maior<preco){
     maior=precosProdutos
 }
