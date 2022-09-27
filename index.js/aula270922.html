@@ -7,22 +7,27 @@
         
   </head>
   <body>
-               <script>
-                    while(i<15){
-                     produto={
-                    nomeDoProduto:prompt(`digite o nome do produto`),
-                     marca:prompt(`digite a marca`),
-                     link:prompt(`digite o link`),
-                     }
-          
-                document.write(`${produto.nomeDoProduto}`) 
-                 document.write(`<td> ${produto.marca}</td>`) 
-                 document.write(`<img src= ${produto.link}/>`)   
-                 
-                    i++
-                     
-                 }
-                  
-                     </script>
+    <script>
+        let i=0
+        let preco=0
+        while(i<3){
+         produto={
+        nomeDoProduto:prompt(`digite o nome do produto`),
+         marca:prompt(`digite a marca`),
+         link:prompt(`digite o link`),
+         precounit:parseFloat(prompt(`digite o valor`)),
+         }
+         preco=preco+produto.precounit
+
+    document.write(`<p> NOME: ${produto.nomeDoProduto}</p>`) 
+     document.write(`<p> MARCA: ${produto.marca}</p>`) 
+     document.write(`<p><img src= ${produto.link}/></p>`)   
+     document.write(`<p> PREÇO: ${produto.precounit}</p>`)   
+        i++
+         
+     }
+     document.write(`<p> PREÇO: ${preco}</p>`)  
+      
+         </script>  
       
   </body>
