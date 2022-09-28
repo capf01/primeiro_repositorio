@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html  lang="pt-br">
+    
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Página Inicial</title>
-        
-  </head>
-  <body>
-    <script>
-        let i=0
-        let preco=0
-        while(i<3){
-         produto={
-        nomeDoProduto:prompt(`digite o nome do produto`),
-         marca:prompt(`digite a marca`),
-         link:prompt(`digite o link`),
-         precounit:parseFloat(prompt(`digite o valor`)),
-         }
-         preco=preco+produto.precounit
-
-    document.write(`<p> NOME: ${produto.nomeDoProduto}</p>`) 
-     document.write(`<p> MARCA: ${produto.marca}</p>`) 
-     document.write(`<p><img src= ${produto.link}/></p>`)   
-     document.write(`<p> PREÇO: ${produto.precounit}</p>`)   
-        i++
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    
+    
+    
+    <body>
+        <script>
          
-     }
-     document.write(`<p> PREÇO  TOTAL: ${preco}</p>`)  
-      
-         </script>  
-      
-  </body>
+            let listaProdutos = []
+    
+            for (i = 1; i <= 2; i++) { 
+                nomeDoProduto = prompt(`Digite nome do produto.`)
+                marcaDoProduto = prompt(`Digite  marca do produto.`)
+                fotoDoProduto = prompt(`Insira o link da foto produto.`)
+                preçoUnitario = prompt(`Digite o preço`)
+                quantidadeDoProduto= prompt(`Digite a quantidade`)
+    
+                let produto = {
+                    nome: nomeDoProduto,
+                    marca: marcaDoProduto,
+                    foto: fotoDoProduto,
+                    preço: preçoUnitario,
+                    quantidade: quantidadeDoProduto,
+                }
+              listaProdutos.push(produto) 
+    
+            }
+            
+           for (i=0; i<listaProdutos.length; i++) {
+            let produto=listaProdutos[i]
+        
+         document.write(`<tr> Produto ${i+1} </tr></br>`)
+         document.write(`<tr> Nome: <td> ${produto.nome} </td></tr></br>`)
+         document.write(`<tr> Produto: <td> ${produto.marca} </td></tr></br>`)
+         document.write(`<tr> Foto: <td> ${produto.foto} </td></tr></br>`)
+         document.write(`<tr> Preço: <td>  ${produto.preço} </td></tr></br>`)
+         document.write(`<tr> Quantidade em estoque: <td>  ${produto.quantidade}</td></tr></br>`)
+         document.write(`<tr> Valor total: <td> ${produto.preço * produto.quantidade}</td></tr></br>`)
+         document.write(`<tr><br></br></tr></tr>`)
+       
+    
+           }
+
+    
+     </script>
+    
+    </body>
+    
+    </html>
