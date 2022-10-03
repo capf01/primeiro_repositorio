@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Página Inicial</title>
+        
+  </head>
+  <body>
+    
+      <script>
+       
+       function eq (x,y,z){
+        let delta=Math.pow(y,2)-4*x*z
+        let x1=(-y-Math.sqrt(delta))/(2*x)
+        let x2=(-y+Math.sqrt(delta))/(2*x)
+        document.write(`<p>${x}x² + ${y}x +${z}</p>`)
+        document.write(`<p>X1: ${x1} X2: ${x2}</p>`)
+        
+       }
+       let a=parseFloat(prompt(`digite a`))
+       let b=parseFloat(prompt(`digite b`))
+       let c=parseFloat(prompt(`digite c`))
+       eq(a,b,c)
+
+        </script>
+  </body>

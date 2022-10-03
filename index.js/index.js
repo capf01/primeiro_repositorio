@@ -1,38 +1,53 @@
-/** tipos primitivos
- * variaveis no javascript
- * operadores matemáticos do Javascript*/
-// serve para escrever menssagem
-// string -->textos
-// number --> números
-// boolean --> true or false
-console.log("hello world")
-console.log(5)
-console.log(45.5)
-console.log(true)
-console.log(false)
-// variaveis
-let menssagem
-menssagem="Bem-vindos"
-console.log(menssagem)
-menssagem=10
-console.log(menssagem)
-const pi=3.1415 // a declaracao const (constante) não permite a modificação 
- console.log(pi)
- let a=2
- let b=1
- console.log ("a=",a,"b=",b)
- let c
- c=a
- a=b
-//soma
- console.log("a=",a,"b=",c)
-console.log("soma",+c)
-console.log("2³=",Math.pow(2,3))//maneira antiga
-//subtração
-//multiplicação
-//divisão
-let x=3,y=3
-console.log("X^Y=",x**y)//maneira mais atual de fazer uma operação de potenciação
-//resto
-console.log("resto da divisão entre 4 e 2",4%2)
-console.log("resto da divisão entre 5 e 6",5%6)
+/**
+ * Criar uma função responsável por mostrar o alerta na tela
+ */
+ function mostrarAlerta() {
+    /**
+     * o objeto document é um objeto que faz uma representação 
+     * do HTML do seu site dentro do Javascript
+     */
+  
+    /**
+     * getElementById serve para recuperar um elemento HTML pelo seu id
+     */
+  
+    /**
+     * A propriedade classList retorna um array com todas as classes CSS que
+     * um elemento possui
+     */
+  
+    /**
+     * classList.add() serve para adicionar novas classes dinamicamente
+     * dentro de um elemento HTML
+     */
+    const divAlerta = document.getElementById('alerta')
+    divAlerta.classList.add('mostrar')
+  }
+  let cont=0
+  function fecharAlerta() {
+    /**
+     * classList.remove() remove uma classe dinamicamente de dentro
+     * de um elemento HTML
+     */
+     const divAlerta = document.getElementById('alerta')
+     divAlerta.classList.remove('mostrar')
+     
+  }
+  
+  const btnMostrar = document.getElementById('mostrar')
+  const btnFechar = document.getElementById('fechar')
+  
+  
+
+  
+  /**
+   * addEventListener é um método que te permite
+   * ouvir eventos do HTML pelo Javascript
+   */
+  /**
+   * Se eu precisar passar uma função como parâmetro para outra
+   * eu passo a referência dela, ou seja, a função sem os parênteses
+   * na frente
+   */
+  btnMostrar.addEventListener('click', mostrarAlerta)
+  btnFechar.addEventListener('click', fecharAlerta)

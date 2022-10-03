@@ -1,0 +1,37 @@
+:root{
+    --azul:#0f637a;
+    --amarelo: #ffd900;
+}
+body{
+    background-color: var(--azul);
+   
+
+}
+main{
+    min-height: 100vh;
+    
+}
+#main-header{
+    height: 90px;
+}
+#main-logo{
+    width: 220px;
+}
+#add-todo{
+    background-color:var(--amarelo);
+    font-size:0;
+}
+#todos-list .card{
+    background-color:var(--amarelo)
+}
+#todos-list .card +.card{
+    margin-top:10px;
+}
+.todo-text{
+
+    margin:0;
+}
+.delete-todo{
+
+    margin:0;
+}
